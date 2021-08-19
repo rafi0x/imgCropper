@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>Image Cropper</title>
+  </head>
+  <body>
+    <!-- image -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10 align-content-center">
+        <!-- Avatar -->
+        <div
+          class="row mt-9"
+          style="align-items: center; justify-content: center"
+        >
+          <label
+            data-target="#modal"
+            data-toggle="modal"
+            class="avatar-xxl avatar-circle avatar-border-lg avatar-uploader"
+            for="avatarUploader"
+            style="
+              width: 25rem;
+              height: 25rem;
+              overflow: hidden;
+              margin-top: 10rem;
+              border: 1px solid gray;
+            "
+          >
+            <img
+              class="avatar-img"
+              src="<%= data ? `/uploads/imgs/${data}` : `/assets/img/img1.jpg` %>"
+              alt="Image Description"
+            />
+            <input
+              type="file"
+              class="js-file-attach avatar-uploader-input"
+              id="avatarUploader"
+              data-hs-file-attach-options='{
+                                      "textTarget": "#imageModal",
+                                      "mode": "image",
+                                      "allowTypes": [".png", ".jpeg", ".jpg"]
+                                   }'
+            />
+          </label>
+        </div>
+        <!-- End List -->
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editUserModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <h4 id="editUserModalTitle" class="modal-title">Crop Image</h4>
+
+            <button
+              type="button"
+              class="btn btn-icon btn-sm btn-ghost-secondary"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="tio-clear tio-lg"></i>
+            </button>
+          </div>
+          <!-- End Header -->
+
+          <!-- Body -->
+          <div class="modal-body">
+            <form
+              action="/tadmin/settings"
+              method="POST"
+              id="avatarForm"
+              enctype="multipart/form-data"
+            >
+              <div
+                class="box row justify-content-center"
+                style="width: 50%; height: 50%; padding: 0.5em; margin: 0 auto"
+              >
+                <div class="col-12 align-items-center mainImg"></div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-white mr-2 cancel"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary save">Save</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- End Tab Content -->
+        </div>
+        <!-- End Body -->
+      </div>
+    </div>
+    <!-- modal start -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS Plugins Init. -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.avatar-xxl {
+  width: 7.875rem;
+  height: 7.875rem;
+}
+
+.avatar-circle {
+  border-radius: 50%;
+}
+.avatar-circle img {
+  width: 100%;
+}
+.avatar-uploader {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.2s;
+  margin-bottom: 0;
+}
+.avatar-uploader:hover {
+  border-color: #377dff;
+}
+.avatar-uploader-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 33, 68, 0.25);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.avatar-uploader-trigger {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.avatar-uploader-icon {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #677788;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.avatar-uploader:hover .avatar-uploader-icon {
+  color: #fff;
+  background-color: #377dff;
+}
+.avatar-xxl .avatar-uploader-icon {
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
+.avatar-img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 0.3125rem;
+}
