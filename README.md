@@ -1,7 +1,7 @@
 ## Image cropper
 
 - what it dose ?
-- it'a a image cropper. crop the image and send image to the server.
+- crop and send cropped image to the server.
 
 ## TOOLS
 
