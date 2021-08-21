@@ -11,6 +11,7 @@ controller.getImg = (req, res, next) => {
 };
 
 controller.postImg = (req, res, next) => {
+  console.log(req.file.filename);
   // for removing old cropper image from file system.
   if (img) {
     fs.unlink(
