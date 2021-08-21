@@ -24,6 +24,6 @@ app.use(middleware);
 app.route("/").get(getImg).post(upload("imgs").single("image"), postImg);
 
 // server connection
-app.listen(process.env.APP_PORT || 3000, () => {
-  console.log(`webServer started on ${process.env.APP_PORT || 3000}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`webServer started on ${process.env.PORT || 3000}`);
 });
