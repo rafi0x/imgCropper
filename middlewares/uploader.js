@@ -10,7 +10,7 @@ const store = (dir) => {
     filename: (req, file, cb) => {
       const extname = path.extname(file.originalname)
         ? path.extname(file.originalname)
-        : `.${file.mimetype.split("/")[1]}`; // if get blob image data, app the extention from file type. (blob data comes wihtout extention)
+        : `.${file.mimetype.split("/")[1]}`; // if get blob image data, add the extention from file type. (blob data comes wihtout extention)
       cb(null, `${file.fieldname}-${Date.now()}${extname}`);
     },
   });
