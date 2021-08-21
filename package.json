@@ -1,14 +1,13 @@
 {
   "name": "imgcropper",
   "version": "1.0.0",
-  "description": "",
+  "description": "crop your image",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "keywords": [],
-  "author": "",
+  "author": "rafi0x",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",

@@ -1,7 +1,6 @@
 // dependencies
 require("dotenv").config();
 const express = require("express");
-const morgan = require("morgan");
 
 // router controller
 const { getImg, postImg } = require("./controller");
