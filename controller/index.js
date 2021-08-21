@@ -17,12 +17,11 @@ controller.postImg = (req, res, next) => {
     fs.unlink(
       path.join(
         __dirname,
-        `../../public/uploads/${req.file.destination.split("/").pop()}/${img}`
+        `../public/uploads/${req.file.destination.split("/").pop()}/${img}`
       ),
       (err) => console.log(err)
     ); // req.file.destination.split("/").pop() for get the dir of uploaded image, which was defined with uploader middleware.
   }
-
   // store new image name for display in frontEnd
   img = req.file.filename;
   return res.redirect("/");
