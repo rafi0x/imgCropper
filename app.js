@@ -1,4 +1,5 @@
 // dependencies
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 
@@ -15,7 +16,6 @@ app.set("view engine", "ejs");
 
 // app middlewares
 const middleware = [
-  morgan("dev"),
   express.static("public"),
   express.urlencoded({ extended: true }),
 ];
