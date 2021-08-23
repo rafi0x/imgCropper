@@ -88,12 +88,8 @@ save.addEventListener("click", async (e) => {
   }, 1000);
 });
 
-// remove selected image from the modal and end cropper on modal close
-save.previousElementSibling.addEventListener("click", () => {
-  mainImg.removeChild(mainImg.children[0]);
-  cropper.destroy();
-});
-// if modal closed on any outer click, modal will be clear
+
+// if modal closed, modal will be clear
 $("#modal").on("hidden.bs.modal", function () {
   mainImg.removeChild(mainImg.children[0]);
   cropper.destroy();
