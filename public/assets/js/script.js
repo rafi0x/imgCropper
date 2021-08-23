@@ -85,7 +85,7 @@ save.addEventListener("click", async (e) => {
   // this will give a reload after upload
   setTimeout(() => {
     location.reload();
-  }, 1000);
+  }, 500);
 });
 
 
